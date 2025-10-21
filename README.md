@@ -44,7 +44,7 @@ A collapsible accordion component displaying React-related FAQs and concepts.
 ### Prerequisites
 
 - Node.js (v16 or higher)
-- npm or bun package manager
+- bun package manager
 
 ### Installation
 
@@ -102,10 +102,3 @@ This project demonstrates:
 - Conditional rendering
 - Array manipulation for multi-selection
 
-## 🤝 Contributing
-
-This is a learning project from FreeCodeCamp React curriculum. Feel free to explore, modify, and enhance the components.
-
-## 📄 License
-
-This project is part of a learning journey and can be used for educational purposes.
