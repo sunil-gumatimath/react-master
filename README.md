@@ -16,7 +16,20 @@ An interactive color generator that creates random colors in both HEX and RGB fo
 
 **Current Status:** Active component in the app
 
-### 2. Accordion FAQ
+### 2. Star Rating Component
+An interactive star rating component with hover effects and smooth transitions.
+
+**Features:**
+- Interactive star rating (default 5 stars, customizable)
+- Hover effects for rating preview
+- Smooth color transitions
+- Click to set rating
+- Proper cursor indication for interactive stars
+- Visual feedback with golden yellow active stars and gray inactive stars
+
+**Current Status:** Active component in the app (recently added and fixed)
+
+### 3. Accordion FAQ
 A collapsible accordion component displaying React-related FAQs and concepts.
 
 **Features:**
@@ -82,9 +95,12 @@ src/
 │   │   ├── Accordion.jsx    # Main accordion component
 │   │   ├── data.js          # FAQ data for accordion
 │   │   └── styles.css       # Accordion styling
-│   └── random-color/
-│       ├── RandomColor.jsx  # Color generator component
-│       └── styles.css       # Color generator styling
+│   ├── random-color/
+│   │   ├── RandomColor.jsx  # Color generator component
+│   │   └── styles.css       # Color generator styling
+│   └── star-rating/
+│       ├── StarRating.jsx   # Interactive star rating component
+│       └── styles.css       # Star rating component styling
 ├── App.jsx                  # Main app component
 ├── App.css                  # App-wide styles
 ├── index.css                # Global styles
@@ -96,9 +112,11 @@ src/
 This project demonstrates:
 - Modern React hooks (`useState`, `useEffect`)
 - Component-based architecture
-- State management
-- Event handling
+- State management (including multiple states)
+- Event handling (onClick, onMouseEnter, onMouseLeave)
 - CSS styling and responsive design
-- Conditional rendering
-- Array manipulation for multi-selection
-
+- CSS transitions and smooth animations
+- Conditional rendering and dynamic className application
+- Array manipulation (mapping, indexing) for multi-selection and interactive components
+- Props passing and default values
+- Interactive UI components with visual feedback
