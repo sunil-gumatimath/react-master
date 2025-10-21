@@ -56,24 +56,22 @@ cd accordion
 
 2. Install dependencies:
 ```bash
-npm install
-# or
 bun install
 ```
 
 3. Start the development server:
 ```bash
-npm run dev
+bun run dev
 ```
 
 4. Open [http://localhost:8081](http://localhost:8081) in your browser
 
 ## 📝 Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Create production build
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint for code quality checks
+- `bun run dev` - Start development server
+- `bun run build` - Create production build
+- `bun run preview` - Preview production build locally
+- `bun run lint` - Run ESLint for code quality checks
 
 ## 🏗️ Project Structure
 
