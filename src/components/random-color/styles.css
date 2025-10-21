@@ -1,0 +1,35 @@
+.background {
+   width: 100vw;
+   height: 100vh;
+}
+
+.container {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 30px;
+   z-index: 1;
+}
+
+.buttons-container {
+   display: flex;
+   gap: 15px;
+   justify-content: center;
+   margin-top: 50px;
+}
+
+.color-display {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   font-size: 60px;
+   flex-direction: column;
+   gap: 20px;
+}
