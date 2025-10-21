@@ -64,7 +64,7 @@ A collapsible accordion component displaying React-related FAQs and concepts.
 1. Clone the repository:
 ```bash
 git clone https://github.com/sunil-gumatimath/react-master.git
-cd accordion
+cd react-master
 ```
 
 2. Install dependencies:
