@@ -4,7 +4,22 @@ A collection of interactive React components built with modern React 19 and Vite
 
 ## 🚀 Components
 
-### 1. Random Color Generator
+### 1. Image Slider
+A dynamic image slider component that fetches and displays images from an external API with navigation controls.
+
+**Features:**
+- Fetches images from external API (Picsum Photos)
+- Configurable image limits and pagination
+- Smooth navigation with arrow buttons (left/right)
+- Circular navigation (wraps from last to first)
+- Visual indicators showing current slide position
+- Interactive dot indicators for direct navigation
+- Loading and error handling states
+- Responsive design with smooth transitions
+
+**Current Status:** Active component in the app
+
+### 2. Random Color Generator
 An interactive color generator that creates random colors in both HEX and RGB formats.
 
 **Features:**
@@ -14,9 +29,9 @@ An interactive color generator that creates random colors in both HEX and RGB fo
 - Toggle between color formats
 - Click to generate new colors
 
-**Current Status:** Active component in the app
+**Current Status:** Available (commented out in App.jsx)
 
-### 2. Star Rating Component
+### 3. Star Rating Component
 An interactive star rating component with hover effects and smooth transitions.
 
 **Features:**
@@ -27,9 +42,9 @@ An interactive star rating component with hover effects and smooth transitions.
 - Proper cursor indication for interactive stars
 - Visual feedback with golden yellow active stars and gray inactive stars
 
-**Current Status:** Active component in the app (recently added and fixed)
+**Current Status:** Available (commented out in App.jsx)
 
-### 3. Accordion FAQ
+### 4. Accordion FAQ
 A collapsible accordion component displaying React-related FAQs and concepts.
 
 **Features:**
@@ -49,6 +64,7 @@ A collapsible accordion component displaying React-related FAQs and concepts.
 
 - **React 19.1.1** - Latest React version for modern components
 - **Vite 7.1.7** - Fast build tool and development server
+- **React Icons 5.5.0** - Popular icon library for React components
 - **ESLint** - Code linting and formatting
 - **CSS Modules** - Styled components with scoped styles
 
@@ -95,6 +111,9 @@ src/
 │   │   ├── Accordion.jsx    # Main accordion component
 │   │   ├── data.js          # FAQ data for accordion
 │   │   └── styles.css       # Accordion styling
+│   ├── image-slider/
+│   │   ├── ImageSlider.jsx  # Dynamic image slider with API integration
+│   │   └── styles.css       # Image slider styling
 │   ├── random-color/
 │   │   ├── RandomColor.jsx  # Color generator component
 │   │   └── styles.css       # Color generator styling
@@ -113,6 +132,10 @@ This project demonstrates:
 - Modern React hooks (`useState`, `useEffect`)
 - Component-based architecture
 - State management (including multiple states)
+- Asynchronous operations with `async/await` and API fetching
+- Error handling in React components
+- Loading states and conditional rendering
+- Props passing and component configuration
 - Event handling (onClick, onMouseEnter, onMouseLeave)
 - CSS styling and responsive design
 - CSS transitions and smooth animations
@@ -120,3 +143,4 @@ This project demonstrates:
 - Array manipulation (mapping, indexing) for multi-selection and interactive components
 - Props passing and default values
 - Interactive UI components with visual feedback
+- Third-party library integration (React Icons)
