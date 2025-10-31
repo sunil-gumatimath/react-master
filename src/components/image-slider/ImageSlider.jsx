@@ -30,8 +30,6 @@ const ImageSlider = ({ url, limit, page }) => {
   useEffect(() => {
     if (url !== '') {
       fetchImages(url);
-      console.log(images);
-
     }
   }, [url, page, limit])
 
