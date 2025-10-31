@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
+import './styles.css'
 
 const LoadMoreData = () => {
 
@@ -18,20 +19,21 @@ const LoadMoreData = () => {
       const result = await response.json();
 
       if (result && result.products && result.products.length) {
-        setProducts(result.products)
+        setProducts((prevProducts) => [...prevProducts, ...result.products])
       }
 
       console.log(result);
 
     } catch (error) {
-      setLoading(false);
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   }
 
   useEffect(() => {
     fetchProduct();
-  }, []);
+  }, [count]);
 
 
   if (loading) {
@@ -45,7 +47,7 @@ const LoadMoreData = () => {
         {
           products && products.length ?
             products.map(item => (
-              <div className='product' key={item.key}>
+              <div className='product' key={item.id}>
                 <img
                   src={item.thumbnail}
                   alt={item.title}
@@ -56,7 +58,7 @@ const LoadMoreData = () => {
         }
       </div>
       <div className='button-container'>
-        <button>Load More Products</button>
+        <button onClick={() => setCount(count + 1)}>Load More Products</button>
       </div>
     </div>
   )
