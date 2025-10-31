@@ -9,7 +9,7 @@ const LoadMoreData = () => {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([])
   const [count, setCount] = useState(0);
-
+  const [disableButton,setDisiableButton] = useState(false);
 
   async function fetchProduct() {
     try {
@@ -35,6 +35,10 @@ const LoadMoreData = () => {
     fetchProduct();
   }, [count]);
 
+  useEffect(()=>{
+    if(products && products.length == 100)
+      setDisiableButton(true);
+  },[products])
 
   if (loading) {
     return <div>Loading data ! Please wait. </div>
@@ -58,7 +62,10 @@ const LoadMoreData = () => {
         }
       </div>
       <div className='button-container'>
-        <button onClick={() => setCount(count + 1)}>Load More Products</button>
+        <button disabled={disableButton} onClick={() => setCount(count + 1)}>Load More Products</button>
+        {
+          disableButton ? <p>You have reached to 100 products</p> : null
+        }
       </div>
     </div>
   )
