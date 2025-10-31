@@ -1,43 +1,131 @@
-# React Master Project
+# React Master Components
 
-This project is a collection of various React components and examples, demonstrating different UI patterns and functionalities.
+A collection of interactive React components built with modern React patterns and hooks. This project showcases various UI components commonly used in web applications.
 
 ## Features
 
-The project includes the following components:
+This project includes the following interactive components:
 
 ### Accordion
-A reusable accordion component that allows users to expand and collapse content sections.
-
-### Image Slider
-A dynamic image slider component for showcasing images in a carousel format.
-
-### Load More Data
-A component that implements a "load more" functionality, typically used for paginated content.
+- Single and multi-selection modes
+- Collapsible content sections
+- Toggle functionality with smooth interactions
 
 ### Random Color Generator
-A utility component that generates and displays random background colors.
+- Generates random colors
+- Interactive color display
+- Color manipulation features
 
 ### Star Rating
-An interactive star rating component for user feedback or display.
+- Interactive star rating component
+- Hover effects and click interactions
+- Customizable number of stars
+- Uses React Icons for star display
+
+### Image Slider
+- Dynamic image carousel
+- Fetches images from Picsum Photos API
+- Pagination support
+- Smooth sliding animations
+
+### Load More Data
+- Progressive data loading
+- API integration for fetching additional content
+- Loading states and error handling
+
+## Tech Stack
+
+- **React 19** - Latest React with modern features
+- **Vite** - Fast build tool and development server
+- **ESLint** - Code linting and formatting
+- **React Icons** - Icon library for UI elements
+- **CSS Modules** - Scoped styling for components
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/sunil-gumatimath/react-master.git
+cd react-master
+```
+
+2. Install dependencies:
+```bash
+bun install
+```
+
+3. Start the development server:
+```bash
+bun run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Available Scripts
+
+- `bun run dev` - Start development server
+- `bun run build` - Build for production
+- `bun run preview` - Preview production build
+- `bun run lint` - Run ESLint
 
 ## Project Structure
 
-The project is organized into standard React project structure with `public` and `src` directories. Key components are located within `src/components/`.
+```
+src/
+├── components/
+│   ├── accordion/
+│   │   ├── Accordion.jsx
+│   │   ├── data.js
+│   │   └── styles.css
+│   ├── image-slider/
+│   │   ├── ImageSlider.jsx
+│   │   └── styles.css
+│   ├── load-more-data/
+│   │   ├── LoadMoreData.jsx
+│   │   └── styles.css
+│   ├── random-color/
+│   │   ├── RandomColor.jsx
+│   │   └── styles.css
+│   └── star-rating/
+│       ├── StarRating.jsx
+│       └── styles.css
+├── App.jsx
+├── App.css
+├── main.jsx
+└── index.css
+```
 
-## Getting Started
+## Component Usage
 
-To run this project locally:
+### Accordion
+```jsx
+import Accordion from './components/accordion/Accordion'
 
-1. Clone the repository (if not already done).
-2. Navigate to the project directory: `cd react-master`
-3. Install dependencies: `npm install`
-4. Start the development server: `npm run dev`
+function App() {
+  return <Accordion />
+}
+```
 
-This will typically start a development server, often on `http://localhost:5173/` (default for Vite).
+### Star Rating
+```jsx
+import StarRating from './components/star-rating/StarRating'
 
-## Technologies Used
+function App() {
+  return <StarRating noOfStars={5} />
+}
+```
 
-- React
-- Vite (for build tooling)
-- CSS (for styling)
+### Image Slider
+```jsx
+import ImageSlider from './components/image-slider/ImageSlider'
+
+function App() {
+  return (
+    <ImageSlider
+      url={'https://picsum.photos/v2/list'}
+      page={'1'}
+      limit={'10'}
+    />
+  )
+}
+```
