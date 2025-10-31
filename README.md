@@ -1,4 +1,4 @@
-# React Master Components
+# React Components Collection
 
 A collection of interactive React components built with modern React patterns and hooks. This project showcases various UI components commonly used in web applications.
 
@@ -127,5 +127,23 @@ function App() {
       limit={'10'}
     />
   )
+}
+```
+
+### Random Color Generator
+```jsx
+import RandomColor from './components/random-color/RandomColor'
+
+function App() {
+  return <RandomColor />
+}
+```
+
+### Load More Data
+```jsx
+import LoadMoreData from './components/load-more-data/LoadMoreData'
+
+function App() {
+  return <LoadMoreData />
 }
 ```
