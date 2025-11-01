@@ -1,11 +1,12 @@
 import React from 'react'
+import { useState } from 'react'
 import QRCode from 'react-qr-code'
 
 const QrCode = () => {
 
 
+    const [qrCode,setQrCode] = useState('');
 
-    
   return (
     <div>
         <h1>Qr Code Generator </h1>
@@ -18,6 +19,7 @@ const QrCode = () => {
         <div>
             <QRCode
             id='qr-code-value'
+            value=''
             />
         </div>
     </div>
