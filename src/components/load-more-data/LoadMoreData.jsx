@@ -1,15 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { useEffect } from 'react';
-import { useState } from 'react'
-import './styles.css'
+import { useState } from 'react';
+import './styles.css';
 
 const LoadMoreData = () => {
-
-
   const [loading, setLoading] = useState(false);
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0);
-  const [disableButton,setDisiableButton] = useState(false);
+  const [disableButton, setDisiableButton] = useState(false);
 
   async function fetchProduct() {
     try {
@@ -35,15 +33,15 @@ const LoadMoreData = () => {
     fetchProduct();
   }, [count]);
 
-  useEffect(()=>{
-    if(products && products.length == 100)
+  useEffect(() => {
+    if (products && products.length === 100) {
       setDisiableButton(true);
-  },[products])
+    }
+  }, [products]);
 
   if (loading) {
     return <div>Loading data ! Please wait. </div>
   }
-
 
   return (
     <div className='load-more-container'>
