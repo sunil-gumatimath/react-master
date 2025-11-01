@@ -2,70 +2,73 @@ import { useEffect, useState } from "react";
 import "./styles.css";
 
 const RandomColor = () => {
+  const [typeOfColor, setTypeOfColor] = useState('hex');
+  const [color, setColor] = useState('#000000');
 
+  const randomColorUtility = (length) => {
+    return Math.floor(Math.random() * length);
+  };
 
-   const [typeOfColor, setTypeOfColor] = useState('hex');
-   const [color, setColor] = useState('#000000')
+  const handleRandomHexColor = () => {
+    // #678765
+    const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+    let hexColor = "#";
 
-   const randomColorUtility = (length) => {
-      return Math.floor(Math.random() * length)
-   }
+    for (let i = 0; i < 6; i++) {
+      hexColor += hex[randomColorUtility(hex.length)];
+    }
+    setColor(hexColor);
+  };
 
-   const handleRandomHexColor = () => {
-      // #678765
-      const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
-      let hexColor = "#";
+  const handleRandomRgbColor = () => {
+    const r = randomColorUtility(256);
+    const g = randomColorUtility(256);
+    const b = randomColorUtility(256);
 
-      for (let i = 0; i < 6; i++) {
-         hexColor += hex[randomColorUtility(hex.length)]
-      }
-      setColor(hexColor);
-   }
+    setColor(`rgb(${r},${g},${b})`);
+  };
 
-   const handleRandomRgbColor = () => {
-      const r = randomColorUtility(256);
-      const g = randomColorUtility(256);
-      const b = randomColorUtility(256);
+  useEffect(() => {
+    if (typeOfColor === 'rgb') {
+      handleRandomRgbColor();
+    } else {
+      handleRandomHexColor();
+    }
+  }, [typeOfColor]);
 
-      setColor(`rgb(${r},${g},${b})`)
-   }
+  return (
+    <div>
+      <div
+        className="background"
+        style={{ background: color }}
+      ></div>
 
+      <div className="container">
+        <div className="buttons-container">
+          <button onClick={() => { setTypeOfColor('hex'); }}>
+            create HEX color
+          </button>
+          <button onClick={() => { setTypeOfColor('rgb'); }}>
+            create RGB color
+          </button>
+          <button
+            onClick={
+              typeOfColor === 'hex'
+                ? handleRandomHexColor
+                : handleRandomRgbColor
+            }
+          >
+            generate Random Color
+          </button>
+        </div>
 
-   useEffect (() => {
-      if (typeOfColor === 'rgb') {
-         handleRandomRgbColor();
-      }else{
-         handleRandomHexColor();
-      }
-   },[typeOfColor]);
-
-   return (
-      <div>
-         <div
-            className="background"
-            style={{ background: color }}
-         ></div>
-
-         <div className="container">
-            <div className="buttons-container">
-               <button onClick={() => { setTypeOfColor('hex') }}>create HEX color</button>
-               <button onClick={() => { setTypeOfColor('rgb') }}>create RGB color</button>
-               <button onClick={
-                  typeOfColor === 'hex'
-                     ? handleRandomHexColor
-                     : handleRandomRgbColor
-               }
-               >generate Random Color</button>
-            </div>
-
-            <div className="color-display">
-               <h3>{typeOfColor === "rgb" ? "RGB Color" : "HEX Color"}</h3>
-               <h1>{color}</h1>
-            </div>
-
-         </div>
+        <div className="color-display">
+          <h3>{typeOfColor === "rgb" ? "RGB Color" : "HEX Color"}</h3>
+          <h1>{color}</h1>
+        </div>
       </div>
-   );
+    </div>
+  );
 }
 
 export default RandomColor;
