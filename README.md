@@ -33,6 +33,12 @@ This project includes the following interactive components:
 - API integration for fetching additional content
 - Loading states and error handling
 
+### QR Code Generator
+- Generate QR codes from text input
+- Interactive input validation
+- Clean, responsive design
+- Uses react-qr-code library for QR generation
+
 ## Tech Stack
 
 - **React 19** - Latest React with modern features
@@ -82,6 +88,9 @@ src/
 │   │   └── styles.css
 │   ├── load-more-data/
 │   │   ├── LoadMoreData.jsx
+│   │   └── styles.css
+│   ├── qr-code-generator/
+│   │   ├── QrCode.jsx
 │   │   └── styles.css
 │   ├── random-color/
 │   │   ├── RandomColor.jsx
@@ -145,5 +154,14 @@ import LoadMoreData from './components/load-more-data/LoadMoreData'
 
 function App() {
   return <LoadMoreData />
+}
+```
+
+### QR Code Generator
+```jsx
+import QrCode from './components/qr-code-generator/QrCode'
+
+function App() {
+  return <QrCode />
 }
 ```
