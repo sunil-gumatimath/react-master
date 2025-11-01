@@ -1,0 +1,51 @@
+.qr-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.qr-title {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.input-container {
+  margin-bottom: 2rem;
+}
+
+.qr-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 250px;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.qr-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.qr-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.qr-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.qr-code-display {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
