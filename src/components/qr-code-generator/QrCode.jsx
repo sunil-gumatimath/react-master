@@ -1,0 +1,13 @@
+import React from 'react'
+
+const QrCode = () => {
+  return (
+    <div>
+        <h1>Qr Code Generator </h1>
+        
+
+    </div>
+  )
+}
+
+export default QrCode
