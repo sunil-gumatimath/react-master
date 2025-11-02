@@ -1,10 +1,9 @@
 import React from 'react'
 
-const MenuItem = () => {
+const MenuItem = ({ item }) => {
   return (
     <div>
-      
-      
+      Menu Item
     </div>
   )
 }
