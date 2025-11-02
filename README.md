@@ -39,6 +39,13 @@ This project includes the following interactive components:
 - Clean, responsive design
 - Uses react-qr-code library for QR generation
 
+### Tree View Menu
+- Hierarchical navigation menu
+- Expandable/collapsible menu items
+- Nested menu structure support
+- Sidebar-style design with smooth animations
+- Uses React Icons for expand/collapse indicators
+
 ## Tech Stack
 
 - **React 19** - Latest React with modern features
@@ -95,9 +102,15 @@ src/
 │   ├── random-color/
 │   │   ├── RandomColor.jsx
 │   │   └── styles.css
-│   └── star-rating/
-│       ├── StarRating.jsx
-│       └── styles.css
+│   ├── star-rating/
+│   │   ├── StarRating.jsx
+│   │   └── styles.css
+│   └── tree-view/
+│       ├── TreeViewMenu.jsx
+│       ├── MenuList.jsx
+│       ├── MenuItem.jsx
+│       ├── data.js
+│       └── style.css
 ├── App.jsx
 ├── App.css
 ├── main.jsx
@@ -163,5 +176,15 @@ import QrCode from './components/qr-code-generator/QrCode'
 
 function App() {
   return <QrCode />
+}
+```
+
+### Tree View Menu
+```jsx
+import TreeViewMenu from './components/tree-view/TreeViewMenu'
+import { menus } from './components/tree-view/data'
+
+function App() {
+  return <TreeViewMenu menus={menus} />
 }
 ```
