@@ -44,6 +44,11 @@ export const menus = [
           {
             label: "Register",
             to: "register",
+            children : [
+              {
+                label : 'Log Out'
+              }
+            ]
           },
         ],
       },
